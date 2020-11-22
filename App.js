@@ -1,21 +1,35 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React, { useState } from 'react';
+import { Button, StyleSheet, Text, View } from 'react-native';
+import PlayScreen from './src/PlayScreen';
 
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+  const [playMode, setPlayMode] = useState(false);
+  return playMode ? (
+      <PlayScreen />
+    ) : (
+        <View style={styles.container}>
+          <Text style={{ fontSize: 20, fontWeight: "bold", color: "yellow" }}>Rock Paper Scissor</Text>
+          <Text style={{ fontSize: 65 }}> ✊ ✋ ✌️ </Text>
+          <View style={styles.playbutton} id="playbutton">
+          <Button onPress={() => {
+            setPlayMode(true);
+          }}
+            title="Play"
+            />
+          </View>
+        </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: 'purple',
     alignItems: 'center',
     justifyContent: 'center',
   },
+  playbutton: {
+    marginTop: 30,
+  },
+
 });

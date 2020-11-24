@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { View, Text, StyleSheet, Button, Image } from "react-native";
 
-const rock = require('./images/rock.jpeg')
-const paper = require('./images/paper.png')
-const scissors = require('./images/scissors.jpeg')
+const rock = require('./images/rock.2.svg')
+const paper = require('./images/paper.3.svg')
+const scissors = require('./images/scissors.1.svg')
 
 const randomImage = () => {
   const emojis = [rock, paper, scissors];

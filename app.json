@@ -23,7 +23,8 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "package": "com.icerman77.rpschallenge_2020"
     },
     "web": {
       "favicon": "./assets/favicon.png"

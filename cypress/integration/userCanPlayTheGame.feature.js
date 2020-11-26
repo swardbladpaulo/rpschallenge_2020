@@ -1,4 +1,4 @@
-describe("user can see first page", () => {
+describe("user can play the game", () => {
   before(() => {
     cy.visit("http://192.168.12.120:19006");
   });

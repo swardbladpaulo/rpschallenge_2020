@@ -12,16 +12,15 @@ const randomImage = () => {
 }
 
 const PlayScreen = () => {
-  const [counter, setCounter] = useState(3);
+  const [counter, setCounter] = useState(5);
   
   useEffect(() => {
-    console.log(counter);
-
+    
     if (counter < 1) return;
 
     const timer = setTimeout(() => {
       setCounter(previus => previus -1)
-    }, 1000);
+    }, 800);
 
     return () => {
       clearTimeout(timer)
@@ -33,12 +32,11 @@ const PlayScreen = () => {
     {(counter < 1) ? ( 
     <>
       <Image style={styles.image} source={randomImage()} />
-          <View style={styles.button}>
-            <Button onPress={() => setCounter(3)} title="Let's Play" />
+        <View style={styles.button}>
+          <Button onPress={() => setCounter(3)} title="Let's Play Again" />
         </View>
     </>
-    ):<Text style={{ fontSize: 90, fontWeight: "bold" }}>{counter}</Text>}
-
+    ):<Text style={{ fontSize: 90, fontWeight: "bold", color: "white" }}>{counter}</Text>}
     </View>
   );
 };
@@ -46,7 +44,7 @@ const PlayScreen = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'yellow',
+    backgroundColor: 'red',
     alignItems: 'center',
     justifyContent: 'center',
   },
@@ -58,9 +56,8 @@ const styles = StyleSheet.create({
 
   button: {
     position: "absolute",
-    bottom: 100,
+    bottom: 200,
   }
-
 })
 
 export default PlayScreen;

@@ -30,6 +30,8 @@ Traversy Media
 https://youtu.be/WR_pWXJZiRY
 
 React Native Docs
+Cypress Docs
+Craft Academy material
 
 ## Versioning
 
